@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+# Speak a greeting, based on the time of day.
+
+time="$(date +%H)";
+say 'Hello Seth.';
+if [ "$time" -lt 12 ]; then
+  say 'Good morning!';
+elif [ "$time" -lt 17 ]; then
+  say 'Good afternoon!';
+else
+  say 'Good evening!';
+fi

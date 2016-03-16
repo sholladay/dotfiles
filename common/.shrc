@@ -1,0 +1,10 @@
+# ~/.shrc
+
+# This is a helper for setting up shells. It can be used by the various conventional
+# setup files for specific shell types, such as .bashrc and ,profile, to provide a
+# consistent baseline experience for everyone.
+
+# Bring in aliases for a friendly UX, if the shell is interactive.
+if [ -n "$PS1" ]; then
+    . "$HOME/.aliases";
+fi;

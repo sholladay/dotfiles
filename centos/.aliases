@@ -1,0 +1,14 @@
+# ~/.aliases
+
+# This is a helper for defining shortcuts and overriding default command arguments.
+# It can be used in places like ~/.shrc to set up a friendly shell environment.
+
+# Make "ls" show hidden files.
+alias ls='ls -A --color=auto';
+# Make "dir" show permissions, friendly file sizes, and folders first.
+alias dir='ls -lh --group-directories-first';
+
+# Helpers for fixing permissions issues.
+alias own='sudo chown "$(whoami)"';
+alias weown='sudo chgrp "$(id -ng)"';
+alias we-own='weown';
