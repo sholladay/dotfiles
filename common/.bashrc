@@ -5,7 +5,7 @@
 # login shells regardless of whether they are interactive or not, and
 # thus it can often be treated as the "common" environment setup.
 
-# Run global bash set up. CentOS comes like this, but it may not be necessary.
+# Run global bash set up. CentOS likes this, but it may not be necessary.
 #if [ -f /etc/bashrc ]; then
 #   . /etc/bashrc;
 #fi;

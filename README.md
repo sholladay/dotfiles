@@ -29,7 +29,7 @@ The dotfiles are designed to help you effortlessly install software and log into
  - `ubuntu`, `centos`, and `osx` contain dotfiles that are tuned for use on those platforms, respectively.
  - `tools` contains helpers to ease the process of working with the dotfiles.
 
-## Installation
+## Install
 
 Currently, there is no automation in place to install the dotfiles. You are expected to back up any existing files and then copy over the new ones. You may also need to tweak some to "merge" them with important behavior of any existing files, as needed. Finally, note that for now, a Unix-like environment is assumed. Because, well, conquering the world is hard.
 
@@ -40,7 +40,7 @@ You are expected to use a combination of the files in `common` along with one sp
     cp -R "/path/to/common"/. "$HOME"/;
     ````
 
-2. Copy all of the files from a sensible OS directory.
+2. Copy all of the files from the relevant platform directory.
     ````sh
     cp -R "/path/to/osx"/. "$HOME"/;
     ````
@@ -51,7 +51,7 @@ You are expected to use a combination of the files in `common` along with one sp
     ln -s "/path/to/greet" "/usr/local/bin/greet";
     ````
 
-4. If you plan to use SSH, modify `.profile` (e.g. `nano "$HOME/.profile";`) and point the two `keychain` commands to your actual SSH private key, instead of the `sme-key` placeholder value. If you aren't going to use these, they can be safely removed.
+4. If you plan to use SSH, modify `.profile` (e.g. `nano "$HOME/.profile";`) and point the two `keychain` commands to your actual SSH private key, instead of the `some-key` placeholder value. If you aren't going to use these, they can be safely removed.
 
 If you need to add environment variables, such as authentication details, you should put them in `.profile`.
 
