@@ -35,21 +35,30 @@ Currently, there is no automation in place to install the dotfiles. You are expe
 
 You are expected to use a combination of the files in `common` along with one specific platform (e.g. `osx`).
 
-1. Copy all of the files from `common`.
-    ````sh
-    cp -R "/path/to/common"/. "$HOME"/;
-    ````
+1. Get the dotfiles.
+
+    ```sh
+    curl -fsSL https://api.github.com/repos/sholladay/dotfiles/tarball -o dotfiles;
+    ```
+
+2. Copy all of the files from `common`.
+
+    ```sh
+    cp -R dotfiles/common/. "$HOME"/;
+    ```
 
 2. Copy all of the files from the relevant platform directory.
-    ````sh
-    cp -R "/path/to/osx"/. "$HOME"/;
-    ````
+
+    ```sh
+    cp -R dotfiles/osx/. "$HOME"/;
+    ```
 
 3. If you chose OS X specifically, set up the audible greeting. Make sure it says your name.
-    ````sh
+
+    ```sh
     # Link to it from somewhere in your PATH.
-    ln -s "/path/to/greet" "/usr/local/bin/greet";
-    ````
+    ln -s "$PWD"/dotfiles/osx/greet '/usr/local/bin/greet';
+    ```
 
 4. If you plan to use SSH, modify `.profile` (e.g. `nano "$HOME/.profile";`) and point the two `keychain` commands to your actual SSH private key, instead of the `some-key` placeholder value. If you aren't going to use these, they can be safely removed.
 
