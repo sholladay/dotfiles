@@ -15,7 +15,7 @@ The dotfiles are designed to help you effortlessly install software and log into
 
     For **Linux**, use [tools/install-linuxbrew](./tools/install-linuxbrew "Helper tor carefully setting up a standalone Linuxbrew"):
     ````sh
-    . /path/to/install-linuxbrew;
+    . dotfiles/tools/install-linuxbrew;
     ````
 
 2. The Funtoo [Keychain](http://www.funtoo.org/Keychain "Helper for passwordless login") helper.
