@@ -14,22 +14,29 @@ export MANPATH;
 INFOPATH="$HOME/.linuxbrew/share/info";
 export INFOPATH;
 
-# Set the default text editor for shell sessions.
-EDITOR='nano';
-export EDITOR;
-
-# Set the color theme for the "ls" command when using --color
-LS_COLORS='di=01;31:ln=01;35:so=01;31:pi=01;33:ex=01;32:bd=36;40:cd=36;40:su=01;32;44:sg=01;32;44:tw=01;31;47:ow=01;31;47:';
-export LS_COLORS;
-
-# Set the color theme for the "grep" command.
-# For parameter meanings, see: http://www.gnu.org/software/grep/manual/html_node/Environment-Variables.html
-# For parameter values, see: http://www.askapache.com/linux/zen-terminal-escape-codes.html#SGR_parameter_values
-GREP_COLORS='ms=01;05;42:mc=01;05;42:sl=:cx=02:fn=01:ln=37:bn=42:se=36';
-export GREP_COLORS;
-
-# Bring in aliases for a friendly UX, if the shell is interactive.
+# Improve the UX when the shell is interactive.
 if [ -n "$PS1" ]; then
+
+    # Set the default command line text editor.
+    EDITOR='nano';
+    export EDITOR;
+
+    # Set the color theme for the "ls" command when using --color
+    LS_COLORS='di=01;31:ln=01;35:so=01;31:pi=01;33:ex=01;32:bd=36;40:cd=36;40:su=01;32;44:sg=01;32;44:tw=01;31;47:ow=01;31;47:';
+    export LS_COLORS;
+
+    # Set the color theme for the "grep" command.
+    # For parameter meanings, see: http://www.gnu.org/software/grep/manual/html_node/Environment-Variables.html
+    # For parameter values, see: http://www.askapache.com/linux/zen-terminal-escape-codes.html#SGR_parameter_values
+    GREP_COLORS='ms=01;05;42:mc=01;05;42:sl=:cx=02:fn=01:ln=37:bn=42:se=36';
+    export GREP_COLORS;
+
+    # Ignore duplicate lines or those starting with a space when saving history.
+    # Only Bash cares about this.
+    HISTCONTROL='ignoreboth';
+    export HISTCONTROL;
+
+    # Bring in command shorthands to reduce typing arcane options.
     . "$HOME/.aliases";
 fi;
 
