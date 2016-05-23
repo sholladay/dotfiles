@@ -3,7 +3,7 @@
 if [ -n "$(command -v yum)" ]; then
     sudo yum groupinstall 'Development Tools' && sudo yum install curl irb m4 ruby;
 else
-    sudo apt-get install -y curl g++ gawk m4 make patch ruby tcl
+    sudo apt-get install -y curl g++ gawk m4 make patch ruby tcl;
 fi;
 
 unset LD_LIBRARY_PATH PKG_CONFIG_PATH HOMEBREW_CC;

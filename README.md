@@ -39,6 +39,7 @@ You are expected to use a combination of the files in `common` along with one sp
 
     ```sh
     curl -fsSL https://api.github.com/repos/sholladay/dotfiles/tarball -o dotfiles;
+    mkdir dotfiles && curl -fsSL https://api.github.com/repos/sholladay/dotfiles/tarball | tar -xz -C dotfiles --strip-components=1;
     ```
 
 2. Copy all of the files from `common`.
