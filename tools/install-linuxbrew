@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if [ -n "$(command -v yum)" ]; then
     sudo yum groupinstall 'Development Tools' && sudo yum install curl irb m4 ruby;
 else
@@ -19,4 +21,3 @@ brew install glibc;
 brew install gcc --with-glibc;
 brew install git;
 brew install coreutils findutils gawk gnu-sed gnu-which grep make ruby;
-
