@@ -20,4 +20,4 @@ An ideal patch brings reliability improvements, new tests, and improved code cov
 
 **Still learning?** Check out how to [contribute to Open Source](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github) projects.
 
-**Important work** comes in many forms. There are labels for [bugs](https://github.com/sholladay/murr/labels/bug) and [easy](https://github.com/sholladay/murr/labels/easy) vs [hard](https://github.com/sholladay/murr/labels/hard) tasks. We also appreciate documentation, examples, tutorials, blogs, videos, books, and other supporting content.
+**Important work** comes in many forms. There are labels for [bugs](https://github.com/sholladay/dotfiles/labels/bug) and [easy](https://github.com/sholladay/dotfiles/labels/easy) vs [hard](https://github.com/sholladay/dotfiles/labels/hard) tasks. We also appreciate documentation, examples, tutorials, blogs, videos, books, and other supporting content.
