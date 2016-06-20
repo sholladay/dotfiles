@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Exit early when things go wrong.
+set -eu;
+
 if [ -n "$(command -v yum)" ]; then
     sudo yum groupinstall 'Development Tools' && sudo yum install curl irb m4 ruby;
 else
