@@ -17,7 +17,7 @@ PATH="$HOME/.linuxbrew/sbin:$HOME/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:
 export PATH;
 
 
-yes | ruby -e "$(curl -fsSL https://raw.github.com/Linuxbrew/linuxbrew/go/install)";
+yes | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)";
 brew tap homebrew/dupes;
 brew update;
 brew install glibc;
