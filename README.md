@@ -1,11 +1,15 @@
+# dotfiles
+
+> Set up your computer to be awesome
+
 Dotfiles enhance your computing experience, mostly by configuring the tools you already use.
 
 These particular dotfiles were designed by [Seth Holladay](https://github.com/sholladay "dotfiles author, sholladay"). Installing them on your machine will give you a consistent, friendly environment to work with, particularly on the command line.
 
 ## Directories
 
- - `common` contains dotfiles that don't have any important cross-platform differences.
- - `ubuntu`, `centos`, and `macos` contain dotfiles that are tuned for use on those platforms, respectively.
+ - `common` contains files that don't have any important cross-platform differences.
+ - `ubuntu`, `centos`, and `macos` contain files that are tuned for use on those platforms, respectively.
 
 ## Install
 
@@ -81,5 +85,21 @@ You may also want to (replace `foo`):
 
 ## TODO
 
-1. Bootstrap / init script for easy set up.
+1. Create an install script to automate set up.
 2. Explore using Yeoman for a more powerful, DRY, templating-based approach.
+
+## Contributing
+
+See our [contributing guidelines](https://github.com/sholladay/dotfiles/blob/master/CONTRIBUTING.md "Guidelines for participating in this project") for more details.
+
+1. [Fork it](https://github.com/sholladay/dotfiles/fork).
+2. Make a feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. [Submit a pull request](https://github.com/sholladay/dotfiles/compare "Submit code to this project for review").
+
+## License
+
+[MPL-2.0](https://github.com/sholladay/dotfiles/blob/master/LICENSE "License for dotfiles") © [Seth Holladay](http://seth-holladay.com "Author of dotfiles")
+
+Go make something, dang it.
