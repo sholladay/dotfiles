@@ -5,14 +5,14 @@ These particular dotfiles were designed by [Seth Holladay](https://github.com/sh
 ## Directories
 
  - `common` contains dotfiles that don't have any important cross-platform differences.
- - `ubuntu`, `centos`, and `osx` contain dotfiles that are tuned for use on those platforms, respectively.
+ - `ubuntu`, `centos`, and `macos` contain dotfiles that are tuned for use on those platforms, respectively.
  - `tools` contains helpers to ease the process of working with the dotfiles.
 
 ## Install
 
 This process is currently pretty manual. You are expected to back up any existing files and then copy over the new ones. You may also want to tweak some to "merge" them with important behavior of any existing files, as needed. Finally, note that for now, a Unix-like environment is assumed. Because, well, conquering the world is hard.
 
-The basic concept is to use a combination of the files in `common` along with one specific platform (e.g. `osx`).
+The basic concept is to use a combination of the files in `common` along with one specific platform (e.g. `macos`).
 
 1. Get the dotfiles.
 
@@ -29,14 +29,14 @@ The basic concept is to use a combination of the files in `common` along with on
 3. Copy all of the files from the relevant platform directory.
 
     ```sh
-    cp -R dotfiles/osx/. "$HOME"/;
+    cp -R dotfiles/macos/. "$HOME"/;
     ```
 
-4. If you chose OS X specifically, set up the audible greeting. Make sure it says your name.
+4. If you chose macOS specifically, set up the audible greeting. Make sure it says your name.
 
     ```sh
     # Link to it from somewhere in your PATH.
-    ln -s "$PWD"/dotfiles/osx/greet '/usr/local/bin/greet';
+    ln -s "$PWD"/dotfiles/macos/greet '/usr/local/bin/greet';
     ```
 
 5. Install `brew` via [Homebrew](http://brew.sh/ "Homebrew, the package manager") or [Linuxbrew](http://linuxbrew.sh/ "Linuxbrew, a Linux-oriented fork of the Homebrew package manager"), for easy package management.
@@ -68,7 +68,7 @@ You may also want to do (replace `foo`):
  - `sudo scutil --set LocalHostName 'foo'`
  - `sudo scutil --set ComputerName 'foo'`
  - Change the [account name and home foler](https://support.apple.com/en-us/HT201548).
- - Open Terminal and import the profile in `osx/Terminal-profile.terminal`.
+ - Open Terminal and import the profile in `macos/Terminal-profile.terminal`.
  - Put SSH keys in `~/.ssh`.
  - Put this in `~/.ssh/config` to keep connections alive.
     ```
