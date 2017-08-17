@@ -62,13 +62,16 @@ The basic concept is to use a combination of the files in `common` along with on
 
 If you need to add environment variables, such as service credentials, you should put them in `.shrc`.
 
-You may also want to do (replace `foo`):
+You may also want to (replace `foo`):
 
  - `sudo scutil --set HostName 'foo.local'`
  - `sudo scutil --set LocalHostName 'foo'`
  - `sudo scutil --set ComputerName 'foo'`
  - Change the [account name and home foler](https://support.apple.com/en-us/HT201548).
  - Open Terminal and import the profile in `macos/Terminal-profile.terminal`.
+ - `brew install git node`
+ - If using macOS, run `brew tap caskroom/cask` to set up [`brew cask`](https://caskroom.github.io/) for easy GUI app installs.
+ - If using [Sublime Text](https://www.sublimetext.com), install [Package Control](https://packagecontrol.io).
  - Put SSH keys in `~/.ssh`.
  - Put this in `~/.ssh/config` to keep connections alive.
     ```
@@ -76,11 +79,8 @@ You may also want to do (replace `foo`):
       ServerAliveInterval 30
       ServerAliveCountMax 1000
     ```
- - If using [Sublime Text](https://www.sublimetext.com), install Package Control(https://packagecontrol.io).
 
 ## TODO
 
-1. Bootstap / init script, for easy set up.
+1. Bootstrap / init script for easy set up.
 2. Explore using Yeoman for a more powerful, DRY, templating-based approach.
-3. Automatically `brew install git node`, etc.
-4. Automatically set up `brew cask` for easy GUI app installs.
