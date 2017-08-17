@@ -6,13 +6,12 @@ These particular dotfiles were designed by [Seth Holladay](https://github.com/sh
 
  - `common` contains dotfiles that don't have any important cross-platform differences.
  - `ubuntu`, `centos`, and `macos` contain dotfiles that are tuned for use on those platforms, respectively.
- - `tools` contains helpers to ease the process of working with the dotfiles.
 
 ## Install
 
 This process is currently pretty manual. You are expected to back up any existing files and then copy over the new ones. You may also want to tweak some to "merge" them with important behavior of any existing files, as needed. Finally, note that for now, a Unix-like environment is assumed. Because, well, conquering the world is hard.
 
-The basic concept is to use a combination of the files in `common` along with one specific platform (e.g. `macos`).
+The basic concept is to use the files in `common` along with those for your platform (e.g. `macos`).
 
 1. Get the dotfiles.
 
@@ -20,19 +19,19 @@ The basic concept is to use a combination of the files in `common` along with on
     mkdir dotfiles && curl -fsSL https://api.github.com/repos/sholladay/dotfiles/tarball | tar -xz -C dotfiles --strip-components=1;
     ```
 
-2. Copy all of the files from `common`.
+2. Copy the files from `common`.
 
     ```sh
     cp -R dotfiles/common/. "$HOME"/;
     ```
 
-3. Copy all of the files from the relevant platform directory.
+3. Copy the files from the relevant platform directory.
 
     ```sh
     cp -R dotfiles/macos/. "$HOME"/;
     ```
 
-4. If you chose macOS specifically, set up the audible greeting. Make sure it says your name.
+4. If you chose the macOS platform, set up the audible greeting. Make sure it says your name.
 
     ```sh
     # Link to it from somewhere in your PATH.
@@ -46,9 +45,9 @@ The basic concept is to use a combination of the files in `common` along with on
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
     ```
 
-    For **Linux**, use [tools/install-linuxbrew](./tools/install-linuxbrew "Helper tor carefully setting up a standalone Linuxbrew"):
+    For **Linux**:
     ```sh
-    . dotfiles/tools/install-linuxbrew;
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)";
     ```
 
 6. Set up SSH.
