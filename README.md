@@ -51,7 +51,8 @@ The basic concept is to use the files in `common` along with those for your plat
 
     For **Linux**:
     ```sh
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)";
+    PATH="/home/linuxbrew/.linuxbrew/sbin:/home/linuxbrew/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$HOME/.linuxbrew/bin:$PATH";
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)";
     ```
 
 6. Set up SSH.

@@ -6,7 +6,7 @@
 
 # Colon-separated list of where the shell should look for programs, from left to right.
 # Prefer user-provided programs over system ones, but also prefer privileged ones.
-PATH="$HOME/.linuxbrew/sbin:$HOME/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin";
+PATH="/home/linuxbrew/.linuxbrew/sbin:/home/linuxbrew/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$HOME/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin";
 export PATH;
 # Make sure "man" and "info" find the most up-to-date and relevant docs.
 MANPATH="$HOME/.linuxbrew/share/man";
