@@ -11,9 +11,18 @@ These particular dotfiles were designed by [Seth Holladay](https://github.com/sh
  - `common` contains files that don't have any important cross-platform differences.
  - `ubuntu`, `centos`, and `macos` contain files that are tuned for use on those platforms, respectively.
 
+## Contents
+
+ - [Install](#install)
+ - [Additional setup](#additional-setup)
+ - [Easy macOS app installs](#easy-macos-app-installs)
+ - [TODOs](#todos)
+ - [Contributing](#contributing)
+ - [License](#license)
+
 ## Install
 
-This process is currently pretty manual. You are expected to back up any existing files and then copy over the new ones. You may also want to tweak some to "merge" them with important behavior of any existing files, as needed. Finally, note that for now, a Unix-like environment is assumed. Because, well, conquering the world is hard.
+The process is currently pretty manual. You are expected to back up any existing files and then copy over the new ones. If you need to preserve functionality from existing dotfiles, that is left up to you. Finally, note that a Unix-like environment is assumed, because conquering the world is hard.
 
 The basic concept is to use the files in `common` along with those for your platform (e.g. `macos`).
 
@@ -44,7 +53,7 @@ The basic concept is to use the files in `common` along with those for your plat
 
 5. Install `brew` via [Homebrew](http://brew.sh/ "Homebrew, the package manager") or [Linuxbrew](http://linuxbrew.sh/ "Linuxbrew, a Linux-oriented fork of the Homebrew package manager"), for easy package management.
 
-    For **OS X**:
+    For **macOS**:
     ```sh
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
     ```
@@ -55,7 +64,7 @@ The basic concept is to use the files in `common` along with those for your plat
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)";
     ```
 
-6. Set up SSH.
+6. Set up SSH keys.
 
     Modify `.shrc` and `.profile` (e.g. `nano "$HOME/.profile";`) to point the `keychain` commands at your actual SSH private key, instead of the `some-key` placeholder value. If you are not going to use these, they can be safely removed.
 
@@ -66,16 +75,19 @@ The basic concept is to use the files in `common` along with those for your plat
 
 If you need to add environment variables, such as service credentials, you should put them in `.shrc`.
 
-You may also want to (replace `foo`):
+## Additional setup
 
- - `sudo scutil --set HostName 'foo.local'`
- - `sudo scutil --set LocalHostName 'foo'`
- - `sudo scutil --set ComputerName 'foo'`
+These extra steps are recommended for an optimal experience.
+
+Replace `My-Laptop` with your own value in the commands below.
+
+ - `sudo scutil --set HostName 'My-Laptop.local'`
+ - `sudo scutil --set LocalHostName 'My-Laptop'`
+ - `sudo scutil --set ComputerName 'My-Laptop'`
  - Change the [account name and home foler](https://support.apple.com/en-us/HT201548).
- - Open Terminal and import the profile in `macos/Terminal-profile.terminal`.
+ - Open [Terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)) and import the profile in `macos/Terminal-profile.terminal`.
  - `brew install git node`
- - If using macOS, run `brew tap caskroom/cask` to set up [`brew cask`](https://caskroom.github.io/) for easy GUI app installs.
- - If using [Sublime Text](https://www.sublimetext.com), install [Package Control](https://packagecontrol.io).
+ - If you plan to use [Sublime Text](https://sublimetext.com), install [Package Control](https://packagecontrol.io).
  - Put SSH keys in `~/.ssh`.
  - Put this in `~/.ssh/config` to keep connections alive.
     ```
@@ -84,7 +96,19 @@ You may also want to (replace `foo`):
       ServerAliveCountMax 1000
     ```
 
-## TODO
+## Easy macOS app installs
+
+If you are on macOS, you now have an amazing utility called [brew cask](https://caskroom.github.io), which can install GUI apps, such as [Firefox](https://en.wikipedia.org/wiki/Firefox). Try it out!
+
+```sh
+brew cask install firefox
+```
+
+That is all you have to do. No more searching the web, finding a download link, clicking the download link, going to your downloads folder, extracting the app from an archive, and moving the app to where it belongs; that is _so old school_.
+
+If you do need to search for a package, `brew cask search` and `brew cask info` are your friends, but usually you can just guess the package name.
+
+## TODOs
 
 1. Create an install script to automate set up.
 2. Explore using Yeoman for a more powerful, DRY, templating-based approach.
