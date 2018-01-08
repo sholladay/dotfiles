@@ -41,7 +41,7 @@ A Unix-like environment is assumed, because conquering the world is hard.
 
 5. Set up SSH keys.
 
-    Modify `.shrc` and `.profile` (e.g. `nano "$HOME/.profile";`) to point the `keychain` commands at your actual SSH private key, instead of the `some-key` placeholder value. If you are not going to use these, they can be safely removed.
+    Modify `.shrc` and `.profile` (e.g. `nano "$HOME/.profile";`), replace `my-key` with the name of your SSH private key so that `keychain` can load it. If you are not going to use `keychain`, these commands can be safely removed.
 
 ## Additional setup
 
