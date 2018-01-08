@@ -30,6 +30,7 @@ fi;
 brew install git fish node keychain;
 
 if test ! -e "$HOME/.ssh/config"; then
+    mkdir -p "$HOME/.ssh";
     cat > "$HOME/.ssh/config" << 'EOL'
 Host *
   ServerAliveInterval 30
