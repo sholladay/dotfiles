@@ -20,7 +20,7 @@ A Unix-like environment is assumed, because conquering the world is hard.
 
 ## Why?
 
- - Installs the `brew` package manager (either [Homebrew](http://brew.sh "Homebrew, the package manager") or [Linuxbrew](http://linuxbrew.sh "Linuxbrew, a Linux-oriented fork of the Homebrew package manager"), depending on the platform)
+ - Installs the `brew` package manager ([Homebrew](http://brew.sh "Homebrew, the package manager") or [Linuxbrew](http://linuxbrew.sh "Linuxbrew, a Linux-oriented fork of the Homebrew package manager"), based on the platform)
  - Uses `brew` to install other common tools such as [Git](https://git-scm.com) and [Node.js](https://nodejs.org)
  - Easy and secure SSH key management with the [Funtoo Keychain](https://www.funtoo.org/Keychain "Helper for key-based login")
  - Keeps SSH connections alive
@@ -31,7 +31,7 @@ A Unix-like environment is assumed, because conquering the world is hard.
 
 2. If you are planning to [change your account name](https://support.apple.com/en-us/HT201548), do so now, before any other software is installed. Not all software is capable of gracefully handling changes to your home directory path.
 
-3. Run the installer. *Take a look at [install.sh](https://github.com/sholladay/dotfiles/blob/master/install.sh) to see what it does.*
+3. Run the installer. *See [install.sh](https://github.com/sholladay/dotfiles/blob/master/install.sh) to learn what it does.*
 
     ```sh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/sholladay/dotfiles/master/install.sh)";
@@ -52,6 +52,7 @@ Replace `My-Laptop` with your own value in the commands below.
  - `sudo scutil --set HostName 'My-Laptop.local'`
  - `sudo scutil --set LocalHostName 'My-Laptop'`
  - `sudo scutil --set ComputerName 'My-Laptop'`
+ - Install [Droid Sans Mono](https://fontsquirrel.com/fonts/droid-sans-mono) font for programming and terminal use
  - Add environment variables, such as service credentials, to `~/.shrc`
  - Set up [fish](https://fishshell.com/) as the default shell and use the [Pure](https://github.com/rafaelrinaldi/pure) theme.
  - If you use [Sublime Text](https://sublimetext.com), install [Package Control](https://packagecontrol.io).
