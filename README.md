@@ -54,7 +54,7 @@ Replace `My-Laptop` with your own value in the commands below.
  - `sudo scutil --set ComputerName 'My-Laptop'`
  - Install [Droid Sans Mono](https://fontsquirrel.com/fonts/droid-sans-mono) font for programming and terminal use
  - Add environment variables, such as service credentials, to `~/.shrc`
- - Set up [fish](https://fishshell.com/) as the default shell and use the [Pure](https://github.com/rafaelrinaldi/pure) theme.
+ - Set up [fish](https://fishshell.com/) as the [default shell](https://stackoverflow.com/a/20506404) and use the [Pure](https://github.com/rafaelrinaldi/pure) theme.
  - If you use [Sublime Text](https://sublimetext.com), install [Package Control](https://packagecontrol.io).
  - Put SSH keys in `~/.ssh`. Make new keys with `ssh-keygen -t ed25519` to use [ED25519](https://en.wikipedia.org/wiki/EdDSA) encryption.
 
