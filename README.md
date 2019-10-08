@@ -75,7 +75,7 @@ If you do need to search for a package, `brew cask search` and `brew cask info` 
 You can easily download the files and manually install them yourself.
 
 ```sh
-mkdir dotfiles && curl -fsSL https://api.github.com/repos/sholladay/dotfiles/tarball | tar -xz -C dotfiles --strip-components=1;
+mkdir dotfiles && curl -fsSL https://github.com/sholladay/dotfiles/archive/master.tar.gz | tar -x -C dotfiles --strip-components=1;
 ```
 
 Note the directories within the project:

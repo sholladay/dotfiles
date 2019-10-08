@@ -3,7 +3,7 @@ set -eu;
 DIR="$(mktemp -d)";
 
 echo "Downloading dotfiles to $DIR";
-curl -fsSL https://api.github.com/repos/sholladay/dotfiles/tarball | tar -xz -C "$DIR" --strip-components=1;
+curl -fsSL https://github.com/sholladay/dotfiles/archive/master.tar.gz | tar -x -C "$DIR" --strip-components=1;
 
 OS="$(uname | tr '[:upper:]' '[:lower:]')";
 if test "$OS" = 'darwin'; then
