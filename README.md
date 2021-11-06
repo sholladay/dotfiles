@@ -49,7 +49,6 @@ These extra steps are recommended for an optimal experience.
 
 Replace `My-Laptop` with your own value in the commands below.
 
- - `sudo scutil --set HostName 'My-Laptop'`
  - `sudo scutil --set LocalHostName 'My-Laptop'`
  - `sudo scutil --set ComputerName 'My-Laptop'`
  - Install [Droid Sans Mono](https://fontsquirrel.com/fonts/droid-sans-mono) font for programming and terminal use
