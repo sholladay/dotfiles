@@ -49,8 +49,8 @@ These extra steps are recommended for an optimal experience.
 
 Replace `My-Laptop` with your own value in the commands below.
 
+ - `sudo scutil --set ComputerName 'My Laptop'`
  - `sudo scutil --set LocalHostName 'My-Laptop'`
- - `sudo scutil --set ComputerName 'My-Laptop'`
  - Install [Droid Sans Mono](https://fontsquirrel.com/fonts/droid-sans-mono) font for programming and terminal use
  - Add environment variables, such as service credentials, to `~/.shrc`
  - Set up [fish](https://fishshell.com/) as the [default shell](https://stackoverflow.com/a/20506404) and use the [Pure](https://github.com/rafaelrinaldi/pure) theme.
