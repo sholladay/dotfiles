@@ -51,23 +51,21 @@ Replace `My-Laptop` with your own value in the commands below.
 
  - `sudo scutil --set ComputerName 'My Laptop'`
  - `sudo scutil --set LocalHostName 'My-Laptop'`
- - Install [Droid Sans Mono](https://fontsquirrel.com/fonts/droid-sans-mono) font for programming and terminal use
- - Add environment variables, such as service credentials, to `~/.shrc`
+ - Add environment variables, such as service credentials, to `~/.config/fish/config.fish`
  - Set up [fish](https://fishshell.com/) as the [default shell](https://stackoverflow.com/a/20506404) and use the [Pure](https://github.com/rafaelrinaldi/pure) theme.
- - If you use [Sublime Text](https://sublimetext.com), install [Package Control](https://packagecontrol.io).
  - Put SSH keys in `~/.ssh`. Make new keys with `ssh-keygen -t ed25519` to use [ED25519](https://en.wikipedia.org/wiki/EdDSA) encryption.
 
 ## Easy macOS app installs
 
-If you are on macOS, you now have an amazing utility called [brew cask](https://caskroom.github.io), which can install GUI apps, such as [Firefox](https://en.wikipedia.org/wiki/Firefox). Try it out!
+If you are on macOS, you can install apps from the command line with Homebrew [brew cask](https://caskroom.github.io), which can install GUI apps, such as [Firefox](https://en.wikipedia.org/wiki/Firefox). Try it out!
 
 ```sh
-brew cask install firefox hyper paste signal slack sonos tower
+brew cask install discord sonos tower visual-studio-code
 ```
 
 That is all you have to do. No more searching the web, finding a download link, clicking the download link, going to your downloads folder, extracting the app from an archive, and moving the app to where it belongs; that is _so old school_.
 
-If you do need to search for a package, `brew cask search` and `brew cask info` are your friends, but usually you can just guess the package name.
+If you do need to search for a package, `brew search` and `brew info` are your friends, but usually you can just guess the package name.
 
 ## Manual install
 
