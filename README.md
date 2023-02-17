@@ -37,7 +37,7 @@ A Unix-like environment is assumed, because conquering the world is hard.
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/sholladay/dotfiles/master/install.sh)";
     ```
 
-4. If you are on macOS, the shell will speak a greeting to you. Modify `/usr/local/bin/greet` and make sure it says your name.
+4. If you are on macOS, the shell will speak a greeting to you. Modify `~/Code/sh/greet` and make sure it says your name.
 
 ## Additional setup
 
