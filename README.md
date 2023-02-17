@@ -37,11 +37,7 @@ A Unix-like environment is assumed, because conquering the world is hard.
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/sholladay/dotfiles/master/install.sh)";
     ```
 
-4. If you are on macOS, the shell will speak a greeting to you. Modify `/usr/local/bin/greet` and make sure it says your name. Then set `macos/Seth-Dark.terminal` as your terminal profile.
-
-5. Set up SSH keys.
-
-    Modify `.shrc` and `.profile` (e.g. `nano "$HOME/.profile";`), replace `my-key` with the name of your SSH private key so that `keychain` can load it. If you are not going to use `keychain`, these commands can be safely removed.
+4. If you are on macOS, the shell will speak a greeting to you. Modify `/usr/local/bin/greet` and make sure it says your name.
 
 ## Additional setup
 
@@ -53,6 +49,7 @@ Replace `My-Laptop` with your own value in the commands below.
  - `sudo scutil --set LocalHostName 'My-Laptop'`
  - Add environment variables, such as service credentials, to `~/.config/fish/config.fish`
  - Set up [fish](https://fishshell.com/) as the [default shell](https://stackoverflow.com/a/20506404) and use the [Pure](https://github.com/rafaelrinaldi/pure) theme.
+ - Set `Seth-Dark.terminal` as your terminal profile.
  - Put SSH keys in `~/.ssh`. Make new keys with `ssh-keygen -t ed25519` to use [ED25519](https://en.wikipedia.org/wiki/EdDSA) encryption.
 
 ## Easy macOS app installs
@@ -60,7 +57,7 @@ Replace `My-Laptop` with your own value in the commands below.
 If you are on macOS, you can install apps from the command line with Homebrew [brew cask](https://caskroom.github.io), which can install GUI apps, such as [Firefox](https://en.wikipedia.org/wiki/Firefox). Try it out!
 
 ```sh
-brew install discord sonos tower visual-studio-code
+brew install firefox
 ```
 
 That is all you have to do. No more searching the web, finding a download link, clicking the download link, going to your downloads folder, extracting the app from an archive, and moving the app to where it belongs; that is _so old school_.
@@ -75,12 +72,9 @@ You can easily download the files and manually install them yourself.
 mkdir dotfiles && curl -fsSL https://github.com/sholladay/dotfiles/archive/master.tar.gz | tar -x -C dotfiles --strip-components=1;
 ```
 
-Note the directories within the project:
+Note the directories within the project. `linux` and `macos` contain files that are tuned for use on those platforms, respectively.
 
- - `common` contains files that don't have any important cross-platform differences.
- - `ubuntu`, `centos`, and `macos` contain files that are tuned for use on those platforms, respectively.
-
-The installer copies files from `common` along with those for your platform (e.g. `macos`).
+The installer copies files from either `macos` or `linux` to your home directory.
 
 ## Contributing
 

@@ -23,7 +23,9 @@ fi;
 rm -r "$DIR";
 
 brew install deno fish git node;
-brew install discord pandora sonos tower visual-studio-code;
+if test "$OS" = 'darwin'; then
+    brew install discord pandora sonos tower visual-studio-code;
+fi;
 
 if test ! -e "$HOME/.ssh/config"; then
     mkdir -p "$HOME/.ssh";
