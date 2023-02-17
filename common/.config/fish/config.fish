@@ -1,5 +1,6 @@
 if status is-interactive
-    ~/Code/sh/greet &;
+    "$HOME/Code/sh/greet" &;
+    echo -e '\nWelcome to the Matrix.\n';
     # Make "ls" show hidden files.
     alias ls='ls -AG';
     # Make "dir" show permissions and friendly file sizes.
