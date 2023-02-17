@@ -9,7 +9,6 @@ echo 'Installing Homebrew';
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)";
 
 echo "Installing dotfiles in $HOME";
-cp -R "$DIR/common/." "$HOME/";
 
 OS="$(uname | tr '[:upper:]' '[:lower:]')";
 if test "$OS" = 'darwin'; then
@@ -18,15 +17,13 @@ if test "$OS" = 'darwin'; then
     mv "$DIR/macos/greet" "$HOME/Code/sh/";
     cp -R "$DIR/macos/." "$HOME/";
 elif test "$OS" = 'linux'; then
-    cp -R "$DIR/centos/." "$HOME/";
-else
-    echo 'Your operating system is not supported yet';
-    rm -r "$DIR";
-    exit 1;
+    cp -R "$DIR/linux/." "$HOME/";
 fi;
 
+rm -r "$DIR";
+
 brew install deno fish git node;
-brew install discord sonos tower visual-studio-code;
+brew install discord pandora sonos tower visual-studio-code;
 
 if test ! -e "$HOME/.ssh/config"; then
     mkdir -p "$HOME/.ssh";

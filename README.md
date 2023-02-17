@@ -20,10 +20,10 @@ A Unix-like environment is assumed, because conquering the world is hard.
 
 ## Why?
 
- - Installs the `brew` package manager ([Homebrew](http://brew.sh "Homebrew, the package manager") or [Linuxbrew](http://linuxbrew.sh "Linuxbrew, a Linux-oriented fork of the Homebrew package manager"), based on the platform)
+ - Installs the `brew` package manager ([Homebrew](https://brew.sh "Homebrew, the package manager"))
  - Uses `brew` to install other common tools such as [Git](https://git-scm.com) and [Node.js](https://nodejs.org)
- - Easy and secure SSH key management with the [Funtoo Keychain](https://www.funtoo.org/Keychain "Helper for key-based login")
  - Keeps SSH connections alive
+ - Comes with a vibrant terminal theme
 
 ## Install
 
@@ -37,7 +37,7 @@ A Unix-like environment is assumed, because conquering the world is hard.
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/sholladay/dotfiles/master/install.sh)";
     ```
 
-4. If you are on macOS, the shell will speak a greeting to you. Modify `/usr/local/bin/greet` and make sure it says your name.
+4. If you are on macOS, the shell will speak a greeting to you. Modify `/usr/local/bin/greet` and make sure it says your name. Then set `macos/Seth-Dark.terminal` as your terminal profile.
 
 5. Set up SSH keys.
 
@@ -60,7 +60,7 @@ Replace `My-Laptop` with your own value in the commands below.
 If you are on macOS, you can install apps from the command line with Homebrew [brew cask](https://caskroom.github.io), which can install GUI apps, such as [Firefox](https://en.wikipedia.org/wiki/Firefox). Try it out!
 
 ```sh
-brew cask install discord sonos tower visual-studio-code
+brew install discord sonos tower visual-studio-code
 ```
 
 That is all you have to do. No more searching the web, finding a download link, clicking the download link, going to your downloads folder, extracting the app from an archive, and moving the app to where it belongs; that is _so old school_.
