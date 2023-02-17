@@ -1463,18 +1463,28 @@
 	GiQpMjdJTFFTV11kand+mZudoq22vsEAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
 	AAAAyg==
 	</data>
+	<key>ShowActiveProcessArgumentsInTabTitle</key>
+	<false/>
 	<key>ShowActiveProcessArgumentsInTitle</key>
 	<false/>
 	<key>ShowActiveProcessInTabTitle</key>
 	<false/>
 	<key>ShowActiveProcessInTitle</key>
 	<false/>
+	<key>ShowActivityIndicatorInTab</key>
+	<true/>
 	<key>ShowComponentsWhenTabHasCustomTitle</key>
 	<true/>
 	<key>ShowDimensionsInTitle</key>
 	<false/>
+	<key>ShowRepresentedURLInTabTitle</key>
+	<false/>
+	<key>ShowRepresentedURLInTitle</key>
+	<false/>
 	<key>ShowRepresentedURLPathInTabTitle</key>
-	<true/>
+	<false/>
+	<key>ShowRepresentedURLPathInTitle</key>
+	<false/>
 	<key>ShowShellCommandInTitle</key>
 	<false/>
 	<key>ShowTTYNameInTitle</key>
@@ -1659,8 +1669,12 @@
 	</data>
 	<key>UseBrightBold</key>
 	<false/>
+	<key>columnCount</key>
+	<integer>100</integer>
 	<key>name</key>
 	<string>Seth Dark</string>
+	<key>rowCount</key>
+	<integer>25</integer>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>
