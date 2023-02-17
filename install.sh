@@ -13,8 +13,9 @@ cp -R "$DIR/common/." "$HOME/";
 
 OS="$(uname | tr '[:upper:]' '[:lower:]')";
 if test "$OS" = 'darwin'; then
+    mkdir -p "$HOME/Code/sh";
     chmod +x "$DIR/macos/greet";
-    mv "$DIR/macos/greet" '/usr/local/bin/';
+    mv "$DIR/macos/greet" "$HOME/Code/sh/";
     cp -R "$DIR/macos/." "$HOME/";
 elif test "$OS" = 'linux'; then
     cp -R "$DIR/centos/." "$HOME/";
