@@ -3,7 +3,9 @@
 # Speak a greeting, based on the time of day.
 
 time="$(date +%H)";
-say 'Hello Seth.';
+name="$(id -F | grep -o -w '\w*')";
+
+say "Hello $name.";
 if [ "$time" -lt 12 ]; then
   say 'Good morning!';
 elif [ "$time" -lt 17 ]; then
