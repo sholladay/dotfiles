@@ -31,13 +31,28 @@ A Unix-like environment is assumed, because conquering the world is hard.
 
 2. If you are planning to [change your account name](https://support.apple.com/en-us/HT201548), do so now, before any other software is installed. Not all software is capable of gracefully handling changes to your home directory path.
 
-3. Run the installer. *See [install.sh](https://github.com/sholladay/dotfiles/blob/master/install.sh) to learn what it does.*
+3. Run `sudo nano /etc/paths` and add Homebrew to the paths:
+
+    ```
+    /opt/homebrew/bin
+    /usr/local/bin
+    /usr/bin
+    /bin
+    /opt/homebrew/sbin
+    /usr/local/sbin
+    /usr/sbin
+    /sbin
+    ```
+
+4. Restart the shell.
+
+5. Run the installer. *See [install.sh](https://github.com/sholladay/dotfiles/blob/master/install.sh) to learn what it does.*
 
     ```sh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/sholladay/dotfiles/master/install.sh)";
     ```
 
-4. If you are on macOS, the shell will speak a greeting to you. Modify `~/Code/sh/greet` and make sure it says your name.
+6. If you are on macOS, the shell will speak a greeting to you. Modify `~/Code/sh/greet` if it gets your name wrong.
 
 ## Additional setup
 

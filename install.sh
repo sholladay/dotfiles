@@ -2,24 +2,22 @@ set -eu;
 
 DIR="$(mktemp -d)";
 
-echo "Downloading dotfiles to $DIR";
+echo "Downloading dotfiles to temporary directory: $DIR";
 curl -fsSL https://github.com/sholladay/dotfiles/archive/master.tar.gz | tar -x -C "$DIR" --strip-components=1;
 
 echo 'Installing Homebrew';
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)";
 
-echo "Installing dotfiles in $HOME";
+echo "Copying dotfiles to home: $HOME";
 
 OS="$(uname | tr '[:upper:]' '[:lower:]')";
 if test "$OS" = 'darwin'; then
-    mkdir -p "$HOME/Code/sh";
-    chmod +x "$DIR/macos/greet";
-    mv "$DIR/macos/greet" "$HOME/Code/sh/";
     cp -R "$DIR/macos/." "$HOME/";
 elif test "$OS" = 'linux'; then
     cp -R "$DIR/linux/." "$HOME/";
 fi;
 
+echo "Deleting temporary directory: $DIR";
 rm -r "$DIR";
 
 brew install deno fish git node;
