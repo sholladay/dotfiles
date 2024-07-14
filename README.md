@@ -31,28 +31,13 @@ A Unix-like environment is assumed, because conquering the world is hard.
 
 2. If you are planning to [change your account name](https://support.apple.com/en-us/HT201548), do so now, before any other software is installed. Not all software is capable of gracefully handling changes to your home directory path.
 
-3. Run `sudo nano /etc/paths` and add Homebrew to the paths:
+3. Run the installer. *See [install.sh](https://github.com/sholladay/dotfiles/blob/master/install.sh) to learn what it does.*
 
-    ```
-    /opt/homebrew/bin
-    /usr/local/bin
-    /usr/bin
-    /bin
-    /opt/homebrew/sbin
-    /usr/local/sbin
-    /usr/sbin
-    /sbin
+    ```bash
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/sholladay/dotfiles/master/install.sh)";
     ```
 
-4. Restart the shell.
-
-5. Run the installer. *See [install.sh](https://github.com/sholladay/dotfiles/blob/master/install.sh) to learn what it does.*
-
-    ```sh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/sholladay/dotfiles/master/install.sh)";
-    ```
-
-6. If you are on macOS, the shell will speak a greeting to you. Modify `~/Code/sh/greet` if it gets your name wrong.
+4. If you are on macOS, the shell will speak a greeting to you. Modify `~/Code/sh/greet` if it gets your name wrong.
 
 ## Additional setup
 
@@ -60,11 +45,10 @@ These extra steps are recommended for an optimal experience.
 
 Replace `My-Laptop` with your own value in the commands below.
 
- - `sudo scutil --set ComputerName 'My Laptop'`
- - `sudo scutil --set LocalHostName 'My-Laptop'`
+ - macOS: Set `Seth-Dark.terminal` as your terminal profile.
+ - macOS: `sudo scutil --set ComputerName 'My Laptop'`
+ - macOS: `sudo scutil --set LocalHostName 'My-Laptop'`
  - Add environment variables, such as service credentials, to `~/.config/fish/config.fish`
- - Set up [fish](https://fishshell.com/) as the [default shell](https://stackoverflow.com/a/20506404) and use the [Pure](https://github.com/rafaelrinaldi/pure) theme.
- - Set `Seth-Dark.terminal` as your terminal profile.
  - Put SSH keys in `~/.ssh`. Make new keys with `ssh-keygen -t ed25519` to use [ED25519](https://en.wikipedia.org/wiki/EdDSA) encryption.
 
 ## Easy macOS app installs
@@ -87,9 +71,9 @@ You can easily download the files and manually install them yourself.
 mkdir dotfiles && curl -fsSL https://github.com/sholladay/dotfiles/archive/master.tar.gz | tar -x -C dotfiles --strip-components=1;
 ```
 
-Note the directories within the project. `linux` and `macos` contain files that are tuned for use on those platforms, respectively.
+Note the directories within the project. `linux` and `darwin` contain files that are tuned for use on those platforms, respectively.
 
-The installer copies files from either `macos` or `linux` to your home directory.
+The installer copies files for the appropriate platform to your `$HOME` directory.
 
 ## Contributing
 

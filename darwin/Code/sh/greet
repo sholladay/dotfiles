@@ -4,12 +4,12 @@
 
 time="$(date +%H)";
 name="$(id -F | grep -o -w '\w*')";
+greeting="Hello $name.[[slnc 200]] Good";
 
-say "Hello $name.";
 if [ "$time" -lt 12 ]; then
-  say 'Good morning!';
+  say "$greeting morning!";
 elif [ "$time" -lt 17 ]; then
-  say 'Good afternoon!';
+  say "$greeting afternoon!";
 else
-  say 'Good evening!';
+  say "$greeting evening!";
 fi
