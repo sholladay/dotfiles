@@ -6,7 +6,7 @@ DIR="$(mktemp -d)";
 OS="$(uname | tr '[:upper:]' '[:lower:]')";
 
 echo "Downloading dotfiles to temporary directory: $DIR";
-curl -fsSL https://github.com/sholladay/dotfiles/archive/master.tar.gz | tar -x -C "$DIR" --strip-components=1;
+curl -fsSL https://github.com/sholladay/dotfiles/archive/master.tar.gz | tar -xz -C "$DIR" --strip-components=1;
 
 echo "Copying dotfiles to home: $HOME";
 cp -R "$DIR/$OS/." "$HOME/";
