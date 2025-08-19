@@ -51,6 +51,9 @@ if test "$OS" = 'darwin'; then
     brew install discord pandora sonos tower visual-studio-code;
 fi;
 
+echo 'Configuring git to use rebase on pull (no merge commits)';
+git config --global pull.rebase true
+
 echo 'Installing pure-fish/pure terminal theme';
 fisher install pure-fish/pure;
 
